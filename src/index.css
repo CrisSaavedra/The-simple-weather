@@ -1,0 +1,9 @@
+
+
+@import './styles/normalize.css';
+@import './styles/basic.css';
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
