@@ -7,7 +7,23 @@ module.exports = {
     "./src/component/**/*.{js,jsx}"
   ],
   theme: {
-    extend: {},
+    fontFamily: {
+      'font1': ['Mitr', 'sans-serif'],
+    },
+
+    backgroundSize: {
+      'auto': 'auto',
+      'cover': 'cover',
+      'contain': 'contain',
+      '50%': '10%',
+    },
+
+    extend: {
+      backgroundImage: {
+        'search': "url('./assets/search.svg')",
+
+      }
+    },
   },
   plugins: [],
 }
