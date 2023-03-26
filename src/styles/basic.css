@@ -1,6 +1,4 @@
 :root {
-    --fuentePrincipal: 'Roboto', sans-serif;
-    --fuenteSegundaria: 'Lato', sans-serif;
 }
 
 html{
@@ -12,7 +10,7 @@ html{
 }
 
 body{
-    font-family: var(--fuentePrincipal);
+   
     font-size: 1.6rem;
     line-height: 1.5;
 }
@@ -26,8 +24,6 @@ body{
 }
 
 h1,h2,h3,h4,h5,h6{
-    font-weight: 900;
-    font-family: var(--fuenteSegundaria);
     margin: 0;
     padding: 0;
 }

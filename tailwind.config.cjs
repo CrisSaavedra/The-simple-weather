@@ -22,7 +22,8 @@ module.exports = {
       backgroundImage: {
         'search': "url('./assets/search.svg')",
 
-      }
+      },
+      
     },
   },
   plugins: [],
