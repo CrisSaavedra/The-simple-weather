@@ -1,17 +1,17 @@
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { SearchBar } from './components/searchbar/SearchBar';
 
 //the base of data, is an example.
-const citiesData = ['acapulco', 'barcelona', 'curico', 'dallas', 'egipto', 'frutillar', 'gales' , 'honduras', 'irun', 'kiev', 'lota', 'madagascar', 'niebla', 'osorno', 'paris', 'quillota', 'rosario', 'santiago', 'talca', 'ugena', 'valparaiso', 'washington', 'xiannig', 'yumbel', 'zaragoza']
+const citiesData = ['acapulco', 'barcelona', 'curico', 'dallas', 'egipto', 'frutillar', 'gales' , 'honduras', 'irun', 'kiev', 'lota', 'madagascar', 'niebla', 'osorno', 'paris', 'quillota', 'rosario', 'santiago', 'talca', 'ugena', 'valparaiso', 'washington', 'xiannig', 'yumbel', 'zaragoza', 'santo domingo']
 
 
 
 
 
 function TheWeather() {
-  const [cities, setCities] = useState(citiesData);
 
+  const [cities, setCities] = useState(citiesData.sort());
 
   return (
 
