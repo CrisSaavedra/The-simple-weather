@@ -15,7 +15,8 @@ module.exports = {
       'auto': 'auto',
       'cover': 'cover',
       'contain': 'contain',
-      '50%': '10%',
+      '10%': '10%',
+      '5%': '5%',
     },
 
     extend: {
@@ -23,7 +24,7 @@ module.exports = {
         'search': "url('./assets/search.svg')",
 
       },
-      
+
     },
   },
   plugins: [],
