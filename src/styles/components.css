@@ -2,5 +2,16 @@ input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none;
 }
 
-
-
+::-webkit-scrollbar {
+  width: .5rem;
+}
+ 
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(37, 35, 35, 0.3);
+}
+ 
+::-webkit-scrollbar-thumb {
+  background-color: rgb(129, 121, 121);
+  outline: 1px solid rgb(50, 51, 52);
+  
+}
