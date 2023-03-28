@@ -1,22 +1,23 @@
 import axios from 'axios';
-const url1 = 'https://api.openweathermap.org/data/2.5/weather?q=';
-const url2 = '&appid=18cbf5c845db29385a9c8229bdbf48f7';
+
 
 export const useFetch = async (input) => {
-    const newURL = url1 + input + url2;
+    const URL = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${input}?unitGroup=metric&key=SFT8UDGBCFW254FBXLLKA6FCZ&contentType=json`;
 
     const getData = async () => {
-        const res2 = await axios.get(newURL)
+        const res2 = await axios.get(URL)
             .then(res => res.data)
             .catch(error => false)
+        
         return res2
     }
 
-    const { main, weather } = await getData()
+    const { days } = await getData()
+
+    const sevenDays = days.slice(0,6);
 
     return {
-        main,
-        weather
+       sevenDays
     }
 
 }

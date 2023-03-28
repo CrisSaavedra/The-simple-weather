@@ -2,10 +2,7 @@ import { useEffect, useState } from "react";
 import { useFetch } from "../../hooks/useFetch";
 
 
-export const SearchBar = ({ cities, setCities }) => {
-
-    const [doc, setDoc] = useState();
-
+export const SearchBar = ({ cities, setCities, setDays }) => {
 
     const onSearch = async (e) => {
 
@@ -15,38 +12,42 @@ export const SearchBar = ({ cities, setCities }) => {
         onValue(search);
 
         if (e.key === 'Enter') {
-            let { main, weather } = await useFetch(value);
-            if (main && weather) {
+            let { sevenDays, search } = await useFetch(value);
+            if (sevenDays) {
                 let city = cities.find(c => c.toLowerCase() === value);
                 if (!city) {
                     setCities([...cities, value]);
                 }
+                setDays({
+                    search: value,
+                    data: sevenDays,
+                    loading: false,
+                });
                 clearSuggestions();
                 onValue();
-                
 
             } else {
                 console.log('city doesnt exist')
             }
             e.target.value = '';
-            
-            search.setAttribute('disabled', true) // averiguar como hacer disable o algo parecido cuando termina de buscar y guardar todo
-            console.log(search.attributes)
-        }else{
+
+            // search.setAttribute('disabled', true) // averiguar como hacer disable o algo parecido cuando termina de buscar y guardar todo
+
+        } else {
             mangerData(value);
         }
     }
 
     const onValue = (element) => {
-     
+
         if (element != null && element.value != '') {
             element.classList.remove("bg-search");
-            
-        }else if (element != null && element.value === '') {
+
+        } else if (element != null && element.value === '') {
             element.classList.add("bg-search");
-           
+
         }
-       
+
     }
 
     const mangerData = (value) => {
