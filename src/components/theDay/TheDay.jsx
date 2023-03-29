@@ -11,7 +11,10 @@ export const TheDay = ({ days }) => {
 
     return (
 
-        <div className='mt-28 w-11/12 flex flex-col items-center'>
+        <div className='mt-28 w-11/12 flex flex-col items-center '>
+
+            <h3 className='text-3xl font-extralight mb-16 text-neutral-400'>{days.search.toUpperCase()}</h3>
+
             <div className=" flex flex-col items-center text-neutral-500 font-normal">
                 <div className='flex justify-center'>
                     <h3 className='text-4xl'>{useWhatDay(days.data[0].datetime)}</h3>
@@ -30,10 +33,7 @@ export const TheDay = ({ days }) => {
             <div className='border-b mt-20 w-11/12 border-neutral-600 brightness-50' ></div>
 
             <div className='mt-10 mb-20  flex flex-wrap gap-x-36 gap-y-14 justify-center min-w-min '>
-
-                <OthersDays days={days.data}/>
-
-
+                <OthersDays days={days.data} />
             </div>
         </div>
     )
