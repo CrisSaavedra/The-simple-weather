@@ -14,7 +14,7 @@ export const useFetch = async (input) => {
 
     const { days } = await getData()
 
-    const sevenDays = days.slice(0,6);
+    const sevenDays = days.slice(0,7);
 
     return {
        sevenDays

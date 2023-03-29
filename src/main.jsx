@@ -4,7 +4,7 @@ import TheWeather from './TheWeather'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <TheWeather />
-  </React.StrictMode>,
+  // </React.StrictMode>,
 )
