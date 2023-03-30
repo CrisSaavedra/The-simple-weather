@@ -1,6 +1,4 @@
 import axios from 'axios';
-import { useState } from 'react';
-
 
 export const useFetch = async (input) => {
 
@@ -18,7 +16,12 @@ export const useFetch = async (input) => {
 
 
     const { days } = await getData();
-
+    if(days=== undefined){
+        const sevenDays = false;
+        return {
+            sevenDays
+        }
+    }
     const sevenDays = days.slice(0, 7);
 
     return {

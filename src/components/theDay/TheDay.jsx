@@ -1,19 +1,22 @@
 
-
-
-import { useEffect, useState } from 'react';
 import { OthersDays } from '../otherDays/OthersDays';
 import { useWhatDay } from '../../hooks/useWhatDay';
 import { useIcon } from '../../hooks/useIcon';
+import { SearchNotFound } from '../searchNotFound/searchNotFound';
+import { useEffect } from 'react';
 
 
 export const TheDay = ({ days }) => {
 
+    if (!days.search) {
+        return <SearchNotFound />
+    }
+
     return (
 
-        <div className='mt-28 w-11/12 flex flex-col items-center '>
+        <div id="days" className='mt-28 w-11/12 flex flex-col items-center animate-load '>
 
-            <h3 className='text-3xl font-extralight mb-16 text-neutral-400'>{days.search.toUpperCase()}</h3>
+            <h3 className='text-3xl font-extralight mb-16 text-neutral-400 '>{days.search.toUpperCase()}</h3>
 
             <div className=" flex flex-col items-center text-neutral-500 font-normal">
                 <div className='flex justify-center'>

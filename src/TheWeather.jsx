@@ -23,8 +23,8 @@ function TheWeather() {
 
 
   return (
- 
-    <div className="min-h-screen bg-neutral-800  flex flex-col items-center">
+
+    <div className="min-h-screen bg-neutral-800  flex flex-col items-center ">
 
       <div className=" mx-auto w-11/12  ">
         <div className="flex flex-col items-center bg-neutral-800 ">
@@ -32,10 +32,10 @@ function TheWeather() {
         </div>
         <SearchBar cities={cities} setCities={setCities} setDays={setDays} />
       </div>
-      <div className='mx-auto w-11/12 flex justify-center'>
+      <div className='mx-auto w-11/12 flex justify-center overflow-hidden '>
 
         {
-          days.search != 'error' ?   days.loading ? <Loader/> : <TheDay days={days} />  : <SearchNotFound/>
+          days.loading ? <Loader /> : <TheDay days={days} />
         }
 
       </div>

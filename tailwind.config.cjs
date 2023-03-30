@@ -24,6 +24,20 @@ module.exports = {
         'search': "url('./assets/search.svg')",
 
       },
+      keyframes: {
+        load: {
+          '0%': { transform: 'translateX(-135rem)' },
+          '100%': { transform: 'translateX(0rem)' },
+        },
+        out: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(175rem)' },
+        }
+      },
+      animation: {
+        load: 'load 1s ease-out forwards',
+        out: 'out 0.7s ease-in forwards',
+      }
 
     },
   },
