@@ -2,7 +2,7 @@
 import { OthersDays } from '../otherDays/OthersDays';
 import { useWhatDay } from '../../hooks/useWhatDay';
 import { useIcon } from '../../hooks/useIcon';
-import { SearchNotFound } from '../searchNotFound/searchNotFound';
+import { SearchNotFound } from '../searchNotFound/SearchNotFound';
 import { useEffect } from 'react';
 
 
