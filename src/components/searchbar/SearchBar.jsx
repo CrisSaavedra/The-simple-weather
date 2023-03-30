@@ -153,7 +153,7 @@ export const SearchBar = ({ cities, setCities, setDays }) => {
     return (
         <div className="relative text-neutral-400 text-4xl flex flex-col items-center mt-20 group mx-auto">
             <div className="z-20 bg-neutral-800 w-11/12 xl:w-10/12  xl:container flex flex-col  items-center transition-all ease-out  duration-500">
-                <input id="search" onKeyUp={e => onSearch(e)} type="search" className="group bg-neutral-800 h-20 w-9/12 xl:w-1/2 bg-search bg-no-repeat bg-left bg-10% xl:bg-5% outline-none focus:outline-none focus:bg-none  hover:border-neutral-700  border-b border-neutral-700 
+                <input id="search" onKeyUp={e => onSearch(e)} type="search" className="group bg-neutral-800 h-20 w-9/12 xl:w-1/2 bg-search bg-no-repeat bg-left bg-10% sm:bg-5% outline-none focus:outline-none focus:bg-none  hover:border-neutral-700  border-b border-neutral-700 
                 focus:scale-110 transition-all ease-out  duration-500 " autoComplete="true" />
             </div>
             <div className="absolute max-w-screen-2xl pt-20 w-11/12 xl:w-10/12 flex justify-center  mt-1 transition-all ease-out duration-500">

@@ -35,7 +35,7 @@ export const TheDay = ({ days }) => {
 
             <div className='border-b mt-20 w-11/12 border-neutral-600 brightness-50' ></div>
 
-            <div className='mt-10 mb-20  flex flex-wrap gap-x-36 gap-y-14 justify-center min-w-min '>
+            <div className='mt-10 mb-20  flex flex-wrap gap-x-11 sm:gap-x-36 gap-y-14 justify-center min-w-min '>
                 <OthersDays days={days.data} />
             </div>
         </div>
