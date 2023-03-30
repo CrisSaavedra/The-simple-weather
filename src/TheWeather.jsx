@@ -1,8 +1,7 @@
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Loader } from './components/loader/Loader';
 import { SearchBar } from './components/searchbar/SearchBar';
-import { SearchNotFound } from './components/searchNotFound/searchNotFound';
 import { TheDay } from './components/theDay/TheDay';
 
 //the base of data, is an example.
